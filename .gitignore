@@ -1,0 +1,10 @@
+.venv/
+venv/
+__pycache__/
+.env
+*.py[cod]
+uploads/*
+!uploads/.gitkeep
+vector_db/*
+!vector_db/.gitkeep
+instance/

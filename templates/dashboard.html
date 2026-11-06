@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block title %}Dashboard | Institute AI{% endblock %}{% block content %}
+<section class="welcome"><div><p class="eyebrow">INSTITUTE KNOWLEDGE ASSISTANT</p><h1>Hello, {{ current_user.name }}</h1><p class="muted">Ask questions about institute documents you can access.</p></div><span class="pill">{{ current_user.role|title }}</span></section>
+<div class="stats"><div class="stat"><span>Available documents</span><strong>{{ document_count }}</strong></div><div class="stat"><span>Your conversations</span><strong>{{ conversation_count }}</strong></div></div>
+<section class="panel"><h2>Ask the institute assistant</h2><p class="muted">Answers are grounded in indexed PDF documents.</p>
+<div id="chat-history" class="history"><p class="muted center">Your conversation will appear here.</p></div>
+<form id="chat-form" class="chat-form"><textarea id="question" rows="2" maxlength="5000" placeholder="Ask about admissions, fees, exams or policies..." required></textarea><button class="btn primary">Send question</button></form>
+<p class="muted small">Check important decisions against the original institute document.</p></section>{% endblock %}
